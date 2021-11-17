@@ -38,8 +38,8 @@ export class SharedService {
   playend() {
     this.start = true;
     this.message = "Game Over<br>";
-    var payoutJack = 1;
-    var dealervalue = this.checktotal(this.dealerCard);
+    let payoutJack = 1;
+    let dealervalue = this.checktotal(this.dealerCard);
     this.dValue = dealervalue;
 
     while (dealervalue < 17) {
@@ -51,7 +51,7 @@ export class SharedService {
     }
 
     //WHo won???
-    var playervalue = this.checktotal(this.playerCard);
+    let playervalue = this.checktotal(this.playerCard);
     if (playervalue == 21 && this.playerCard.length == 2) {
       this.message = "Player Blackjack";
       payoutJack = 1.5;

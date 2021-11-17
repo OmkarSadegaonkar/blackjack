@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { CardsService } from './cards.service';
-import { PlayerService } from './player.service';
 import { SharedService } from './shared.service';
 
 @Injectable({
