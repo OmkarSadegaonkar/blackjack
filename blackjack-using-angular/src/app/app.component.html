@@ -1,0 +1,22 @@
+<div>
+  <div>
+    <h1>BlackJack Game</h1>
+    <div id="message" [innerHTML]="service.message"></div>
+    <div id="start" *ngIf="service && service.start">
+      <button id="btnstart" type="button" (click)="Start()" class="btn">Start Game</button>
+    </div>
+    <div id="output">
+      Dealer Hand : <span>{{service.dValue}}</span>
+      <div id="dealerHolder" [innerHTML]="service.dealerHolder | safeHtml"></div>
+      Player Hand : <span>{{service.pValue}}</span>
+      <div id="playerHolder" [innerHTML]="service.playerHolder | safeHtml"></div>
+      <div *ngIf="service && !service.start">
+        <button id="btnhold" type="button" (click)="cardAction('hold')" class="btn">Hold</button>
+        <button id="btnhit" type="button" (click)="cardAction('hit')" class="btn">Hit</button>
+      </div>
+      <div>
+        <button id="btndeal" type="button" onclick="dealNew()" class="btn">Deal</button>
+      </div>
+    </div>
+    <div>
+    </div>
